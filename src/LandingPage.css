@@ -1,0 +1,256 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: Arial, sans-serif; /* Choose a font family */
+  color: black;
+}
+
+.address,
+.message,
+.social-media {
+  margin: 10px 0; /* Reduced margin for less spacing */
+}
+
+p {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 10px 0; /* Reduced margin for paragraph elements */
+}
+
+/* Existing styles continue... */
+
+.landing-container {
+  padding: 0;
+  /* margin-top: 20px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Full height of the viewport */
+  background: linear-gradient(
+    to bottom right,
+    #abe3ba,
+    #fafcfe
+  ); /* Color gradient background */
+  position: relative;
+  color: rgb(21, 21, 21); /* Text color */
+  overflow: hidden; /* Prevents symbols from overflowing */
+  border: 10px solid transparent; /* Border for zig-zag effect */
+  background-clip: padding-box;
+  clip-path: polygon(
+    0 5%,
+    5% 0%,
+    10% 5%,
+    15% 0,
+    20% 5%,
+    25% 0,
+    30% 5%,
+    35% 0,
+    40% 5%,
+    45% 0,
+    50% 5%,
+    55% 0,
+    60% 5%,
+    65% 0,
+    70% 5%,
+    75% 0,
+    80% 5%,
+    85% 0,
+    90% 5%,
+    95% 0,
+    100% 5%,
+    100% 100%,
+    /* 90% 100%,
+    80% 95%,
+    70% 100%,
+    60% 95%,
+    50% 100%,
+    40% 95%,
+    30% 100%,
+    20% 95%,
+    10% 100%, */
+      0% 100%,
+    0% 95%,
+    -5% 100%,
+    0% 200%
+  );
+  /* Zig-zag border effect */
+}
+
+.logo {
+  margin-top: 60px;
+  width: 150px; /* Adjust size */
+  border-radius: 20px; /* Rounded corners */
+  position: relative; /* For positioning */
+  animation: bounce 2s infinite; /* Bounce animation */
+}
+
+/* Keyframes for bounce animation */
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.message {
+  margin: 10px;
+  margin-bottom: 0px;
+  font-size: 2.5rem;
+  background: linear-gradient(90deg, #ff0080, #ff8c00, #ffdd00, #8cff00);
+  background-size: 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: blink 1s infinite, gradient 3s ease infinite;
+}
+
+.heartbeat {
+  display: inline-block;
+  animation: heartbeat 1.5s infinite;
+}
+
+@keyframes heartbeat {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+.companyName {
+  font-family: Georgia, Times, "Times New Roman", serif;
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+}
+.address {
+  text-align: center;
+  margin: 0px 0;
+}
+
+.help-line {
+  text-align: center;
+  margin-top: 5px;
+}
+
+.help-line p {
+  margin: 5px 0;
+  font-size: 1.2rem;
+}
+
+.symbol {
+  position: absolute;
+  font-size: 50px;
+  color: rgba(214, 13, 170, 0.8);
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.symbol.spin {
+  animation: spin 3s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@media (max-height: 250px) {
+  .footer {
+    margin-bottom: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .logo {
+    width: 120px;
+  }
+  .message {
+    font-size: 1.5rem;
+  }
+  .symbol {
+    font-size: 40px;
+  }
+  .companyName {
+    font-size: 1.4rem; /* Smaller font for company name */
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    width: 100px;
+  }
+  .message {
+    font-size: 1.2rem;
+  }
+  .companyName {
+    font-size: 1.2rem; /* Smaller font for company name */
+  }
+  .symbol {
+    font-size: 30px;
+  }
+}
+@media (min-width: 250px) and (max-width: 480px) {
+  .logo {
+    width: 100px;
+  }
+  .message {
+    font-size: 0.8rem; /* Adjust for smaller screens */
+  }
+  .companyName {
+    font-size: 0.8rem; /* Smaller font for company name */
+  }
+  .symbol {
+    font-size: 20px;
+  }
+}
+
+.landing-container > *:not(.symbol) {
+  z-index: 10;
+}
+
+.social-media {
+  margin-top: 4%;
+  display: flex;
+  gap: 20px;
+}
+
+.social-media a {
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.social-media span:hover {
+  color: #7095b9;
+}
+
+.footer-section {
+  width: 100%; /* Full width footer */
+  margin-top: auto; /* Push footer to the bottom */
+  position: relative; /* For absolute positioning if needed */
+}
+
+.footer p {
+  text-align: center; /* Center footer text */
+  padding: 10px;
+  margin-bottom: 20px; /* Space above footer text */
+  font-size: 0.9rem; /* Footer text size */
+}
